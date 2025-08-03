@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0D0D0D;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logos img{
+  height: 4rem;
+  width: 5rem;
+}
+
+.logos{
+  display: flex;
+  gap: 1rem;
+}
+
+header {
+  background-color: #0D0D0D;
+  padding: 20px 0;
+  border-bottom: 1px solid #1A1A1A;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.logo {
+  font-size: 30px;
+  color: #FF3C38;
+}
+
+nav a {
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #FF3C38;
+}
+
+.hero {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #FF3C38;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #FF3C38;
+  color: #FFF;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e6332e;
+}
+
+.btn.small {
+  padding: 8px 16px;
+  font-size: 13px;
+  background-color: #262626;
+  border: 1px solid #FF3C38;
+  color: #FF3C38;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.btn.small:hover {
+  background-color: #FF3C38;
+  color: white;
+}
+
+.section {
+  padding: 80px 20px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.card {
+  background-color: #1A1A1A;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background-color: #262626;
+}
+
+.card h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #CCCCCC;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  margin-bottom: 16px;
+  font-size: 16px;
+  border-left: 3px solid #FF3C38;
+  padding-left: 12px;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.circular {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #FF3C38;
+}
+
+.skills {
+  list-style: circle;
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.skills li {
+  padding: 5px 0;
+  font-size: 15px;
+  color: #CCCCCC;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0A0A0A;
+  border-top: 1px solid #1A1A1A;
+  color: #fff; /* Add a default text color for the footer */
+}
+
+.footer-container {
+  display: flex; /* Use Flexbox for the main container */
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  align-items: center; /* Center items horizontally */
+  gap: 15px; /* Add space between the child elements */
+}
+
+/* Style for the container holding the mail and LinkedIn links */
+.contact-links {
+  display: flex; /* Use Flexbox to align the links in a row */
+  gap: 20px; /* Space between the links */
+  flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
+  justify-content: center; /* Center the links within the container */
+}
+
+.contact-link {
+  display: flex; /* Use Flexbox for each link item */
+  align-items: center; /* Vertically align the icon and text */
+  text-decoration: none;
+  color: #fff; /* Set a default link color */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact-link:hover {
+  color: #FF3C38; /* Your brand color for the hover effect */
+}
+
+.contact-link img {
+  width: 24px; /* Set a consistent size for the icons */
+  height: 24px;
+  margin-right: 8px; /* Space between the icon and the text */
+}
+
+/* Media query for larger screens to arrange items horizontally */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row; /* Arrange items horizontally on larger screens */
+    justify-content: space-between; /* Space out the copyright and links */
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .container,
+  .about,
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  .btn,
+  .btn.small {
+    width: auto;
+  }
+}
