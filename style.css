@@ -19,12 +19,12 @@ a {
   flex-wrap: wrap;
 }
 
-.logos img{
+.logos img {
   height: 4rem;
   width: 5rem;
 }
 
-.logos{
+.logos {
   display: flex;
   gap: 1rem;
 }
@@ -146,6 +146,7 @@ nav a:hover {
 
 .project img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
 }
 
@@ -195,49 +196,50 @@ footer {
   padding: 40px 20px;
   background-color: #0A0A0A;
   border-top: 1px solid #1A1A1A;
-  color: #fff; /* Add a default text color for the footer */
+  color: #fff;
 }
 
 .footer-container {
-  display: flex; /* Use Flexbox for the main container */
-  flex-direction: column; /* Stack items vertically on smaller screens */
-  align-items: center; /* Center items horizontally */
-  gap: 15px; /* Add space between the child elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-/* Style for the container holding the mail and LinkedIn links */
 .contact-links {
-  display: flex; /* Use Flexbox to align the links in a row */
-  gap: 20px; /* Space between the links */
-  flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
-  justify-content: center; /* Center the links within the container */
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-link {
-  display: flex; /* Use Flexbox for each link item */
-  align-items: center; /* Vertically align the icon and text */
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #fff; /* Set a default link color */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
 .contact-link:hover {
-  color: #FF3C38; /* Your brand color for the hover effect */
+  color: #FF3C38;
 }
 
 .contact-link img {
-  width: 24px; /* Set a consistent size for the icons */
+  width: 24px;
   height: 24px;
-  margin-right: 8px; /* Space between the icon and the text */
+  margin-right: 8px;
 }
 
-/* Media query for larger screens to arrange items horizontally */
+/* Desktop Footer Layout */
 @media (min-width: 768px) {
   .footer-container {
-    flex-direction: row; /* Arrange items horizontally on larger screens */
-    justify-content: space-between; /* Space out the copyright and links */
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
+
+/* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
   .hero .container,
   .about,
@@ -246,12 +248,35 @@ footer {
     text-align: center;
   }
 
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
   nav a {
     margin: 10px 0;
+    font-size: 18px;
   }
 
   .btn,
   .btn.small {
     width: auto;
   }
+
+  .container {
+    padding: 20px 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .circular {
+    max-width: 250px;
+  }
 }
+
